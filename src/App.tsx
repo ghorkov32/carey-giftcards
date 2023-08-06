@@ -17,7 +17,8 @@ function App() {
         default: break;
     }
   return (
-    <>
+    <div className={'container'}>
+        <div className={'top'}></div>
         <p className={'title'}>
             {`Hola ${params.name}!`}
         </p>
@@ -30,13 +31,15 @@ function App() {
                 <p className={'regards'}>
                     {`Que lo disfrutes!`}
                 </p>
-                <span className={'company'} onClick={() => window.open('https://www.instagram.com/carey.masoterapia/?hl=es')}>
-                    <img className={'ig-icon'} src={igIcon}/>{`CAREY MASOTERAPIA`}
-                </span>
+                <div className={'company-container'}>
+                    <span className={'company'} onClick={() => window.open('https://www.instagram.com/carey.masoterapia/?hl=es')}>
+                        <img className={'ig-icon'} src={igIcon}/>{`CAREY MASOTERAPIA`}
+                    </span>
+                </div>
             </div>
             <img className={'stars'} src={stars}/>
         </div>
-    </>
+    </div>
   )
 }
 
