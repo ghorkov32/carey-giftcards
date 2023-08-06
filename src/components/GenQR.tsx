@@ -6,7 +6,7 @@ import {
 
 export const GenQR = () => {
 	const [name, setName] = useState('')
-	const [gift, setGift] = useState('')
+	const [gift, setGift] = useState('1')
 	const [qrURL, setQrURL] = useState('')
 	const onImageDownload = () => {
 		const svg = document.getElementById("QRCode");
