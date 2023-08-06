@@ -40,3 +40,50 @@
 .read-the-docs {
   color: #888;
 }
+
+.title {
+  font-size: 48px;
+}
+
+.content {
+  font-size: 24px;
+}
+
+.company {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline ;
+}
+.ig-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.regards {
+  font-size: 36px;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+@media screen and (max-width: 800px){
+  .footer {
+    background-image: url('./stars.gif');
+    justify-content: center;
+    align-items: center;
+  }
+  .stars {
+    display: none;
+  }
+}

@@ -6,6 +6,7 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from 'react-router-dom';
+import { GenQR } from './components/GenQR';
 
 const router = createBrowserRouter([
     {
@@ -13,8 +14,12 @@ const router = createBrowserRouter([
         element: <App />,
     },
     {
-        path: "/:name/:product/:uses",
+        path: "/:name/:product",
         element: <App />,
+    },
+    {
+        path: "/genqr",
+        element: <GenQR />,
     },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
