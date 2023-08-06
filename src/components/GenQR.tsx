@@ -1,4 +1,4 @@
-import QRCode from "react-qr-code";
+import { QRCodeSVG } from 'qrcode.react';
 import {
 	useState,
 } from 'react';
@@ -8,7 +8,7 @@ export const GenQR = () => {
 	const [name, setName] = useState('')
 	const [gift, setGift] = useState('1')
 	const [qrURL, setQrURL] = useState('')
-	const onImageDownload = () => {
+	const download = () => {
 		const svg = document.getElementById("QRCode");
 		const svgData = new XMLSerializer().serializeToString(svg ?? new HTMLElement());
 		const canvas = document.createElement("canvas");
@@ -25,7 +25,7 @@ export const GenQR = () => {
 			downloadLink.click();
 		};
 		img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
-	};
+	}
 
 	return (
 		<>
@@ -49,16 +49,16 @@ export const GenQR = () => {
 
 			{
 				qrURL.length > 0 &&
-				<>
-                    <QRCode
+				<div style={ { display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <QRCodeSVG
                         id="QRCode"
-                        size={256}
-                        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                        size={128}
+                        level={"L"}
+                        includeMargin={false}
                         value={qrURL}
-                        viewBox={`0 0 256 256`}
                     />
-                    <input type="button" value="Descargar" onClick={onImageDownload} />
-				</>
+                    <input type="button" value="Descargar" onClick={download} />
+				</div>
 			}
 		</>
 	);
