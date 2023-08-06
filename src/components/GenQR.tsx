@@ -43,7 +43,7 @@ export const GenQR = () => {
 				<button onClick={(e) => {
 
 					e.preventDefault();
-					setQrURL(`https://carey-masoterapia.netlify.app/${ name }/${ gift }`)
+					setQrURL(`https://carey-giftcards.netlify.app/${ name }/${ gift }`)
 				}}>Generar!</button>
 			</form>
 
